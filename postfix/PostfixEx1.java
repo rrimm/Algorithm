@@ -76,10 +76,10 @@ class OptExp {
 		return false;
 	}
 
-	public String infixTopostfix(String postfix) { // 후위식 변환
+	public String infixTopostfix(String infix) { // 후위식 변환
 		LinkedStack<String> S = new LinkedStack<>();
 		StringBuilder output = new StringBuilder();
-		StringTokenizer stok = new StringTokenizer(postfix, "*-+/)(", true); // true: 연산자도 같이 출력
+		StringTokenizer stok = new StringTokenizer(infix, "*-+/)(", true); // true: 연산자도 같이 출력
 
 		while (stok.hasMoreTokens()) {
 			String token = stok.nextToken().trim();
